@@ -7,8 +7,7 @@ class SearchBar extends React.Component{
     onFormSubmit= (event) => {
         //prevents the browser to submit the form directly and refresh the page
         event.preventDefault();
-
-        console.log(this.state.term);
+        this.props.onSubmit(this.state.term);
     }
     
     render(){
