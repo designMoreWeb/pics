@@ -7,7 +7,12 @@ import SearchBar from './SearchBar';
 
 class App extends React.Component {
     onSearchSubmit(term){
-        console.log(term);
+        axios.get('https://api.unpslash.com/search/photos',{
+            params: { query:term },
+            headers:{
+                Authorization: 'Client-ID 99d043cafac1caa8807a6312ba12ca7a70846b2c27e463f16360270565786993'
+            }
+        });
     }
     render(){
     return (
