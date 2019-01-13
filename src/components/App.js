@@ -6,13 +6,15 @@ import axios from 'axios';
 import SearchBar from './SearchBar';
 
 class App extends React.Component {
-    onSearchSubmit(term){
-        axios.get('https://api.unpslash.com/search/photos',{
-            params: { query:term },
-            headers:{
-                Authorization: 'Client-ID 99d043cafac1caa8807a6312ba12ca7a70846b2c27e463f16360270565786993'
-            }
-        });
+    async onSearchSubmit(term){
+        const response= await axios
+            .get('https://api.unpslash.com/search/photos',{
+                params: { query:term },
+                headers:{
+                    Authorization: 'Client-ID 99d043cafac1caa8807a6312ba12ca7a70846b2c27e463f16360270565786993'
+                }
+            });
+            console.log(response.data.results);
     }
     render(){
     return (
