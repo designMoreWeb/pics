@@ -1,4 +1,8 @@
+//Third party imports
 import React from 'react';
+import axios from 'axios';
+
+//User file imports
 import SearchBar from './SearchBar';
 
 class App extends React.Component {
