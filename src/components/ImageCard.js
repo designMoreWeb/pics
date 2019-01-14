@@ -1,7 +1,6 @@
 import React from 'react';
 
 class ImageCard extends React.Component {
-
     // eslint-disable-next-line no-useless-constructor
     constructor(props){
         super(props);
@@ -14,7 +13,7 @@ class ImageCard extends React.Component {
     setSpans = () =>{
         const height = this.imageRef.current.clientHeight;
         const spans = Math.ceil(height / 10);
-        this.setState({spans: spans});
+        this.setState({spans});
     }
     render(){
         return (
