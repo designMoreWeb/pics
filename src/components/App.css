@@ -1,0 +1,12 @@
+.page-title{
+    color: #000;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.page-instructions{
+    color:#312c2c;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+}
